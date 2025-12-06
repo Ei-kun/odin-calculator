@@ -59,7 +59,7 @@ input.forEach(button => {
                 let output=operate(a,b,sign);
                 txtbar.innerText=output;
                 if(!isNaN(output)){
-                    a=output;
+                    a=String(output);
                     b="";
                     sign=value;
                     txtbar.innerText+=" "+sign;
@@ -102,7 +102,18 @@ input.forEach(button => {
             }
         }
         else if(value === "back"){
-
+            if(b !== ""){
+                b=b.slice(0,-1);
+                txtbar.innerText=txtbar.innerText.slice(0,-1);
+            }
+            else if( sign !== ""){
+                sign="";
+                txtbar.innerText=txtbar.innerText.slice(0,-1);
+            }
+            else if( a !=""){
+                a=a.slice(0,-1);
+                txtbar.innerText=txtbar.innerText.slice(0,-1);
+            }
         }
     });
 })
