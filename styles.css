@@ -3,6 +3,7 @@ body{
     justify-content: center;
     height: 100vh;
     align-items: center ;
+    background-color: #1e2328;
 }
 
 .calculator{
@@ -10,8 +11,15 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    width: fit-content;
-    padding: 8px;
+    padding: 16px;
+    background-color: black;
+    border-radius: 12px;
+}
+
+.input, 
+button{
+    background-color: #3b3f46;
+    color: white;
 }
 
 button{
@@ -19,6 +27,17 @@ button{
     padding: 12px;
     border-radius: 32px;
     border: none;
+}
+
+.input{
+    width: 100%;
+    border-radius: 8px;
+    padding: 4px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 40px;
+    font-size: 24px;
 }
 
 .line{
@@ -30,4 +49,18 @@ button{
 
 .large{
     flex: 2;
+}
+
+.operator{
+    background-color: #FF9913;
+}
+
+.clear{
+    background-color: #BEBEBE;
+    color: black;
+}
+
+.heading{
+    color: white;
+    margin: 2px;
 }

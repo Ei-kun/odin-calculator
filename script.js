@@ -101,7 +101,7 @@ input.forEach(button => {
                 }
             }
         }
-        else if(value === "back"){
+        else if(value === "BACK"){
             if(b !== ""){
                 b=b.slice(0,-1);
                 txtbar.innerText=txtbar.innerText.slice(0,-1);
