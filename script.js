@@ -117,3 +117,27 @@ input.forEach(button => {
         }
     });
 })
+
+document.addEventListener("keydown", (e) => {
+    let key = e.key;
+    switch (key){
+        case "*":
+            key="x";
+            break;
+        case "/":
+            key="÷"
+            break;
+        case "Backspace":
+            key="BACK";
+            break;
+        case "Escape":
+            key="AC";
+            break;
+    }
+    const button = [...document.querySelectorAll("button")]
+    .find(btn => btn.textContent === key);
+    console.log(button);
+    if (button) {
+        button.click();
+    }
+});
